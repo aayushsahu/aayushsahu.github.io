@@ -1,0 +1,154 @@
+.fa,.fab,.fal,.far,.fas{
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
+	display:inline-block;
+	font-style:normal;
+	font-variant:normal;
+	text-rendering:auto;
+	line-height:1;
+}
+.body{
+	background-color:#1C2833;
+	padding: 40px;
+	/*background-image: linear-gradient(to right, #0462f9, #95bcf9 )*/
+	background-image: linear-gradient(to right, #576375, #dcdee2)/*#6a6a6b )*/
+}
+.bodyl{
+	background-color:#1C2833;
+	padding: 40px;
+	position: relative;
+	width:500px;
+}
+.bodyr{
+	background-color: #002833;
+	padding: 40px;
+	left: 100px;
+	position: relative;
+	width: 500px;
+}
+.card{
+	background-color:white;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3) ;
+	padding: 10px;
+	width: 855px;
+  	height: 180px;
+	left: 170px;
+  	top: -150px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.circle{
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border-color: "#00FF00"
+	padding: 2px;
+	position: relative;
+	top: 30px;
+	display: inline-block;
+}
+.name{
+	font-family: "Perpetua";
+	font-size: 27px;
+	position: absolute;
+	left: 30px;
+	top: 20px;
+}
+.obj{
+	font-family: "Perpetua";
+	font-size: 20px;
+	position: relative;
+	left: 30px;
+	top: 40px;
+	width: 700px;
+
+}
+.left{
+	position: relative;
+	font-family: "Perpetua";
+	font-size: 20px;
+	top: 50px;
+	left: 20px;
+
+}
+.right{
+	position: relative;
+	left: 480px;
+	top: -30px;
+	font-family: "Perpetua";
+	font-size: 20px;
+}
+.edu{
+	position: relative;
+	left: 10px;
+	top: -100px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+
+}
+.project{
+	position: relative;
+	left: 10px;
+	top: -100px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+}
+.skill{
+	position: relative;
+	left: 600px;
+	top: -975px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+}
+.certificate{
+	position: relative;
+	left: 600px;
+	top: -975px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+}
+.language{
+	position: relative;
+	left: 600px;
+	top: -975px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+
+}
+.interest{
+	position: relative;
+	left: 600px;
+	top: -975px;
+	font-family: "Perpetua";
+	font-size: 20px;
+	width: 450px;
+}
+.heading{
+	position: absolute;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3) ;
+	padding: 1px;
+	border-radius: 5px;
+	width: 440px;
+}
+#bc{
+	padding:3px;
+}
+#sk{
+	background-color: orange;
+	display:inline;
+	padding: 1px;
+	border-color: #ff9900;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: 2px;
+	border-radius: 5px; 
+}
