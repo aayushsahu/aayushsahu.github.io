@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* for page scrolling */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+@viewport {
+    user-zoom: fixed;
+}
+
+.scroll-point {
+    scroll-snap-align: start;
+}
+
+body{
+    background: #222222;
+    color: #befaf7;
+    font-family: monospace;
+    font-size: 2vw;
+    overflow-x: visible;
+    -webkit-text-size-adjust: none; /* Prevent text from scaling on mobile */
+    user-zoom: fixed; /* Prevent user from zooming in or out */
+}
+
+.banner-screen {
+    height:100vh;
+    width: 98vw;
+}
+
+.hello {
+    font-size: 20vw;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0.5vw 0.5vw 0.1vw red, -0.5vw -0.5vw 0.1vw blue;
+    /* text-shadow: 10px 10px 1px red, -10px -10px 1px blue, -10px -10px 10px rgb(79, 79, 245), 10px 10px 10px rgb(248, 106, 106); */
+
+    /* below code if for disabling text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.blink {
+    animation: 1s linear infinite condemned_blink_effect;
+}
+
+  
+@keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+}
+input.caret-block > span {
+    background-color: hsla(1, 1%, 100%, 1);
+    color: #000;
+}
+.name-input {
+    color: #befaf7;
+    font-size: 10vw;
+    text-shadow: 0.5vw 0.5vw 0.1vw red, -0.5vw -0.5vw 0.1vw blue;
+    background-color: black; 
+    border: none;
+    text-align: center;
+    caret-shape: underscore; 
+    caret-color:red;
+    width: 100%;
+    visibility: hidden;
+    opacity: 20%;
+}
+input.name-input:focus {
+    outline: none;
+}
+
+div #intro {
+    height: 100vh;
+}
+.images{
+    display: flex;
+    height: 50vh;
+}
+
+.card {
+    margin: 1vw;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 7vh;
+}
+
+.circle {
+    width:2vw;
+    height:2vw;
+    border-radius: 1vw;
+    background-color: rgb(253, 166, 4);
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.position1 {
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+    z-index: 3;
+}
+.position2 {
+    position: absolute;
+    top: 50%;
+    right : 1vw;
+    z-index: 3;
+}
+
+/* 
+ * skillset
+ */
+.zoomOutToCorner {
+    animation: 2s ease-out forwards zoomOutToCorner;
+}
+@keyframes zoomOutToCorner {
+    0% {
+        font-size: 20vw;
+        text-align: right;
+        text-shadow: 0.5vw 0.5vw 0.1vw red, -0.5vw -0.5vw 0.1vw blue;
+    }
+    100% {
+        font-size: 3vw;
+        text-align: right;
+        text-shadow: 0.3vw 0.3vw 0.1vw red, -0.3vw -0.3vw 0.1vw blue;
+        margin-top: 2vh;
+    }
+}
+.moveVerticallyUpwards {
+    animation: 2s ease-out forwards moveVerticallyUpwards;
+}
+@keyframes moveVerticallyUpwards {
+    0% {
+        padding: 25vh 0vw;
+    }
+    25% {
+        padding: 12.5vh 0vw;
+    }
+    50% {
+        padding: 6.25vh 0vw;
+    }
+    75% {
+        padding: 3vh 0vw;
+    }
+    100% {
+        padding: 1.5vh 0vw;
+    }
+}
+.glassmorphism {
+    background: rgba(41, 45, 102, 0.144);
+    box-shadow: 0 8px 32px 0 rgba(12, 20, 136, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+}
+/* 
+ * footer
+ */
+footer {
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 17vh;
+    max-width: 100%;
+}
+
+ul{
+    padding: 0.2vh;
+    color: dimgrey;
+    display: inline-flex;
+    width: 100%;
+    position: absolute;
+}
+
+li, li a {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    color: dimgrey;
+}
+
+li a:hover {
+    color: darkslategrey;
+    text-decoration: none;
+    box-shadow: 1vh 1vw 0.2vh red, -1vh -1vw 0.2vh blue;
+}
+
+
