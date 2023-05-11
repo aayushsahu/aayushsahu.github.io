@@ -55,17 +55,32 @@ function resetFirstname(firstnameInput) {
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
-
-function removeBannerPadding() {
-    document.getElementById("skillset").parentElement.classList.add("moveVerticallyUpwards");
-}
 function addZoomOutCornerStyleAnimation() {
     console.log("scrolled");
-    document.getElementById("skillset").classList.add("zoomOutToCorner");
-    setTimeout(removeBannerPadding, 0);
-    document.getElementById("skill").style.visibility = "visible";
+    document.getElementById("skills").classList.add("zoomOutToCorner");
+    document.getElementById("skill-glass").style.visibility = "visible";
+    
+    addStillToSkillGlass();
 }
 
+var skillsDisplayed = false;
+function addStillToSkillGlass() {
+    console.log(skillsDisplayed);
+    if(skillsDisplayed == false) {
+        const skills = ["Java", "Spring Boot",  "Spring Webflux", "Spring Data", "Spring Security", "Node JS"];
+        var skillGlassElement = document.getElementById("skill-glass");
+        console.log("hello");
+        for(let s in skills) {
+            console.log(skills[s]);
+            var div = document.createElement("div");
+            div.innerHTML = skills[s];
+            div.classList.add("glassmorphism");
+            div.classList.add("single-skill");
+            skillGlassElement.appendChild(div);
+        }
+    }
+    skillsDisplayed = true;
+}
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 

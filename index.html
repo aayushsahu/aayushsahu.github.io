@@ -17,34 +17,47 @@
         <title> Bootstrap demo</title>
     </head>
     <body>
-        <div>
+        <div class ="banner-screen">
             <div id="banner" class="banner-screen scroll-point" onclick="viewOrHideCursor()">
                 <h1 class="hello">Hello;</h1>
                 <input type="text" id="firstname" class="name-input" spellcheck="false" placeholder="firstname" 
                     onkeyup="checkFirstname(event)"/>
             </div>
-            <div id="intro" class="banner-screen scroll-point">
-                <div id="image-drawer" class="images">
-                    <div id="card1" class="card">
-                        <div class="circle position1" onclick="prev(event)"></div>
-                        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/h0FNA5YxLzWChHS5K0o4gw_96x96.png" 
-                            style="height:100%; width:100%; z-index:2;">
-                        <div class="circle position2" onclick="next()"></div>
-                    </div>
-                    <div id="card2" class="card">
-                        <div class="circle position1" onclick="prev(event)"></div>
-                        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/AKqvkBpIyr-iLOK7Ig7-yQ_96x96.png" 
-                            style="height:100%; width:100%; z-index:2;">
-                        <div class="circle position2"  onclick="next()"></div>
-                    </div>
+
+            <div id="details" class="banner-screen scroll-point svg-bg">
+                <div id="skills" class = "hello" onclick="addZoomOutCornerStyleAnimation()">Skills</div>
+                <div id="skill-glass" class="" style="visibility: hidden;">
                 </div>
             </div>
-            <div id="details" class="banner-screen scroll-point">
-                <div id="skillset" class = "hello" onclick="addZoomOutCornerStyleAnimation()">Skillsets</div>
-                <div id="skill" class="hello glassmorphism" style="visibility: hidden;">Glass </div>
+            
+            <div id="intro" class="banner-screen scroll-point svg-bg" >
+                <div id="image-drawer" class="images">
+                    <div id="card1" class="card1">
+                        <div class="circle position1" onclick="prev(event)"></div>
+                        <img src="./resources/2.jpg" class="glassmorphism"
+                            style="height:97%; width:100%; z-index:2; margin:auto;">
+                        <div class="circle position2" onclick="next()"></div>
+                    </div>
+                    <div id="card2" class="card2">
+                        <div style = "margin: 10vw 5vh">
+                            <span id="job-role" class ="gradient-text">Java Backend Developer</span>
+                            <br>
+                            <span id="designation" class="gradient-text">(Senior Software Engineer)</span>
+                        </div>
+                        
+                        <p style= "text-align: justify; margin: 1vh 1vw 1vh 1vw; font-size: 2vh;">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Beatae nobis facere dolores omnis veniam officiis placeat 
+                            architecto asperiores unde recusandae eaque maiores commodi 
+                            totam ullam necessitatibus voluptate aspernatur, mollitia quasi?
+                        </p>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-        <footer class="banner-screen scroll-point">
+        
+
+        <footer class="banner-screen scroll-point" style="height: 100vh; padding-top: 85vh;">
             <ul>
                 <li><a href="#banner">Banner</a></li>
                 <li><a href="#intro">Intro</a></li>
@@ -52,5 +65,6 @@
                 <li><a href="#footer">Footer</a></li>
             </ul>
         </footer>
+    </div>
     </body>
 </html>

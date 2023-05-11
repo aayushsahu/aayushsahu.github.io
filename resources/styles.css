@@ -8,7 +8,12 @@ html {
     /* for page scrolling */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 @viewport {
@@ -31,7 +36,7 @@ body{
 
 .banner-screen {
     height:100vh;
-    width: 98vw;
+    width: 100vw;
 }
 
 .hello {
@@ -88,18 +93,63 @@ input.name-input:focus {
 div #intro {
     height: 100vh;
 }
-.images{
-    display: flex;
-    height: 50vh;
+.svg-bg {
+    /* background-image : url("./blurry-gradient-haikei.svg"); */
+    background : linear-gradient(to top, #0C9 0%, #37B 40% ,#60F 100%);
+    /* background: repeating-radial-gradient(#0C9 0%, #37B 40% ,#60F 100%); */
 }
 
-.card {
-    margin: 1vw;
-    width: 50%;
+.images{
+    display: flex;
+    height: 80vh;
+}
+
+.card1 {
+    background-color: rgba(68, 83, 133, 0.521);
+    margin: 8vh 1.5vw 0vh 1vw;
+    width: 30%;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
-    border-radius: 7vh;
+    border-radius: 3vh;
+    opacity: 0.8;
+    animation: glow 10s infinite;
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: -10px -3px 50px 5px darkmagenta;
+    }
+}
+
+.card2 {
+    background-color: rgba(68, 83, 133, 0.521);
+    margin: 15vh 0vw 0vh 0vw;
+    width: 65%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3vh;
+    display: inline;
+}
+
+.gradient-text {
+    font-family: 'Courier New', monospace ;
+    /* background: linear-gradient(to right, #d030a8 0%, #330867 100%); */
+}
+
+#job-role {
+    font-size: 3vw;
+    background: linear-gradient(to left,#a27dcf 0%, #993888 50% ,#5c045c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#designation {
+    font-size: 1vw;
+    margin-top: 2vh;
+    float: right;
 }
 
 .circle {
@@ -127,41 +177,35 @@ div #intro {
 /* 
  * skillset
  */
+ #skills {
+    display: inline;
+    float: right;
+ }
+
 .zoomOutToCorner {
     animation: 2s ease-out forwards zoomOutToCorner;
 }
 @keyframes zoomOutToCorner {
     0% {
         font-size: 20vw;
-        text-align: right;
         text-shadow: 0.5vw 0.5vw 0.1vw red, -0.5vw -0.5vw 0.1vw blue;
     }
     100% {
         font-size: 3vw;
-        text-align: right;
         text-shadow: 0.3vw 0.3vw 0.1vw red, -0.3vw -0.3vw 0.1vw blue;
         margin-top: 2vh;
     }
 }
-.moveVerticallyUpwards {
-    animation: 2s ease-out forwards moveVerticallyUpwards;
-}
-@keyframes moveVerticallyUpwards {
-    0% {
-        padding: 25vh 0vw;
-    }
-    25% {
-        padding: 12.5vh 0vw;
-    }
-    50% {
-        padding: 6.25vh 0vw;
-    }
-    75% {
-        padding: 3vh 0vw;
-    }
-    100% {
-        padding: 1.5vh 0vw;
-    }
+#skill-glass {
+    /* margin-top: 50vh; */
+    margin : 0 0 0 10vw;
+} 
+
+.single-skill {
+    /* display: inline-table; */
+    display: table-row-group;
+    transform: rotate(0deg);
+    text-align: left;
 }
 .glassmorphism {
     background: rgba(41, 45, 102, 0.144);
