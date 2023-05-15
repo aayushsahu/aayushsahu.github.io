@@ -22,157 +22,39 @@
     <body>
         <div class ="banner-screen">
             <div id="banner" class="banner-screen scroll-point" onclick="viewOrHideCursor()">
-                <h1 class="hello titles">Hello;</h1>
+                <h1 class="hello">Hello;</h1>
                 <input type="text" id="firstname" class="name-input" spellcheck="false" placeholder="firstname" 
                     onkeyup="checkFirstname(event)"/>
             </div>
 
-            <div id="details" class="banner-screen scroll-point svg-bg-2">
-                <div id="skills-title" class="gradient-text titles" onclick="addZoomOutCornerStyleAnimation()">SKILLS</div>
-                <div id="skills" style = "display: inline-flexbox;"> 
-                    <div id="java" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                        <img class="skill-icons" src="https://my-learning.w3schools.com/tutorial-logos/java.svg"/>
-                        <!-- SMALL ICONS FOR JAVA-->
-                        <div id="skills-java" class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="spring-boot" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg"/>
-                            </div>
-                            <div id="spring-security" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java" class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="spring-cloud" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
-                            </div>
-                            <div id="spring-data" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
-                            </div>
-                        </div>
-                        <!-- END OF SMALL ICONS fFOR JAVA--> 
-                    </div>
-                    <div id="js" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                        <img class="skill-icons" src="https://my-learning.w3schools.com/tutorial-logos/js.svg"/>
-                        <!-- SMALL ICONS FOR NODE -->
-                        <div id="skills-js"  class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="node-js" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
-                            </div>
-                            <div id="react-js" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java"  class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="express-js" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"/>
-                            </div>
-                            <div id="nest-js" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- END OF SMALL ICONS FOR NODE --> 
-                    </div>
-                    <div id="cloud" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                        <img class="skill-icons" src="https://my-learning.w3schools.com/tutorial-logos/aws.svg"/>
-                        <!-- SMALL ICONS FOR AWS-->
-                        <div id="skills-cloud" class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="aws" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
-                            </div>
-                            <div id="terraform" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-cloud" class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="kubernetes" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg"/>
-                            </div>
-                            <div id="docker" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- END OF SMALL ICONS FOR AWS--> 
-                    </div>
-                    <div id="html" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                        <img class="skill-icons" src="https://my-learning.w3schools.com/tutorial-logos/html.svg"/>
-                        <!-- SMALL ICONS FOR HTML-->
-                        <div id="skills-java"  class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="spring-boot" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg"/>
-                            </div>
-                            <div id="spring-security" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java"   class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="spring-cloud" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
-                            </div>
-                            <div id="spring-data" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
-                            </div>
-                        </div>
-                        <!-- END OF SMALL ICONS HTML--> 
-                    </div>
-                    <div id="css" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                        <img class="skill-icons" src="https://my-learning.w3schools.com/tutorial-logos/css.svg"/>
-                        <!-- SMALL ICONS FOR CSS-->
-                        <div id="skills-java"  class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="bootstrap" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"/>
-                            </div>
-                            <div id="spring-security" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java" class = "glassmorphism" style="margin-top: 0vh; display: inline-flexbox;">
-                            <div id="spring-cloud" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
-                            </div>
-                            <div id="spring-data" class="glassmorphism cube1-face-front" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
-                            </div>
-                        </div>
-                        <!-- END OF SMALL ICONS FOR CSS--> 
-                    </div>
-                </div>
-                <!-- EMPTY BLOCK ELEMENT -->
-                <div id = "empty-block-element"> </div>
-                <!-- EMPTY BLOCK ELEMENT -->
-                
-            </div>
-            
-            <div id="intro" class="banner-screen scroll-point svg-bg" >
+            <div id="intro" class="banner-screen scroll-point" >
                 <div id="image-drawer" class="images">
-                    <div id="card1" class="card1">
-                        <div class="circle position1" onclick="prev(event)"></div>
-                        <img src="./resources/2.jpg" class="glassmorphism"
-                            style="height:97%; width:100%; z-index:2; margin:auto;">
-                        <div class="circle position2" onclick="next()"></div>
+                    <div id="card1" class="card1 glassmorphism-shadowed">
+                        <img class="img" src="./resources/2.jpg" >
                     </div>
-                    <div id="card2" class="card2">
-                        <div style = "margin: 10vw 5vh">
+                    <div id="card2" class="card2 glassmorphism-shadowed">
+                        <div style = "margin: 10vh 5vw">
                             <span id="job-role" class ="gradient-text">Java Backend Developer</span>
                             <br>
-                            <span id="designation" class="gradient-text">(Senior Software Engineer)</span>
+                            <span id="designation">(Senior Software Engineer)</span>
                         </div>
                         
-                        <p style= "text-align: justify; margin: 1vh 1vw 1vh 1vw; font-size: 2vh;">
+                        <p id="description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Beatae nobis facere dolores omnis veniam officiis placeat 
+                            architecto asperiores unde recusandae eaque maiores commodi 
+                            totam ullam necessitatibus voluptate aspernatur, mollitia quasi?
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Beatae nobis facere dolores omnis veniam officiis placeat 
+                            architecto asperiores unde recusandae eaque maiores commodi 
+                            totam ullam necessitatibus voluptate aspernatur, mollitia quasi?
+
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Beatae nobis facere dolores omnis veniam officiis placeat 
+                            architecto asperiores unde recusandae eaque maiores commodi 
+                            totam ullam necessitatibus voluptate aspernatur, mollitia quasi?
+                            <br>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                             Beatae nobis facere dolores omnis veniam officiis placeat 
                             architecto asperiores unde recusandae eaque maiores commodi 
@@ -182,16 +64,156 @@
                     
                 </div>
             </div>
-        
 
-        <footer class="banner-screen scroll-point" style="height: 100vh; padding-top: 85vh;">
-            <ul>
-                <li><a href="#banner">Banner</a></li>
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#footer">Footer</a></li>
-            </ul>
-        </footer>
-    </div>
+            <div id="details" class="banner-screen scroll-point">
+                <div id="competencies" class="gradient-text competencies">Competencies</div>
+                <div id="skills"> 
+                    <div id="java" class="skill-square">
+                        <div id="java-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR JAVA-->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-boot" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg"/>
+                            </div>
+                            <div id="spring-security" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS fFOR JAVA--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="js" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR NODE -->
+                        <div id="skills-js" style="margin-top: 0vh;">
+                            <div id="node-js" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
+                            </div>
+                            <div id="react-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="express-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"/>
+                            </div>
+                            <div id="nest-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS FOR NODE --> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="cloud" class="skill-square">
+                        <div id="cloud-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloud-icon.svg"/>
+                        </div>
+                        
+                        <!-- SMALL ICONS FOR AWS-->
+                        <div id="skills-cloud" style="margin-top: 0vh;">
+                            <div id="aws" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
+                            </div>
+                            <div id="terraform" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-cloud" style="margin-top: 0vh;">
+                            <div id="kubernetes" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg"/>
+                            </div>
+                            <div id="docker" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS FOR AWS--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="html" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR HTML-->
+                        <div id="skills-html" style="margin-top: 0vh;">
+                            <div id="css" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"/>
+                            </div>
+                            <div id="bootstrap" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <!-- <div id="skills-html" style="margin-top: 0vh;">
+                            <div id="tailwind" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div> -->
+                        <!-- END OF SMALL ICONS HTML--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="microservice" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://www.erbrains.com/assets/azure/service-svg/blockchain.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR CSS-->
+                        <div id="skills-microservice" style="margin-top: 0vh;">
+                            <div id="graphql" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"/>
+                            </div>
+                            <div id="grpc" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cncf-branding.netlify.app/img/projects/grpc/horizontal/color/grpc-horizontal-color.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <!-- <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div> -->
+                        <!-- END OF SMALL ICONS FOR CSS--> 
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="banner-screen scroll-point svg-bg" style="height: 100vh; padding-top: 85vh;">
+                <ul class="">
+                    <li><a href="#banner">Banner</a></li>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                </ul>
+            </footer>
+        </div>
     </body>
 </html>
