@@ -148,7 +148,7 @@ input.name-input:focus {
 .card1 {
     background-color: rgba(68, 83, 133, 0.521);
     width: 25vw;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     margin: 25vh 1vw;
     position: relative;
     display: flex;
@@ -162,7 +162,8 @@ input.name-input:focus {
     }
 }
 .img {
-    width: 22vw;
+    max-width: 80%;
+    max-height: 80%;
     aspect-ratio: 1/1;
     border-radius: 50%; 
     margin:auto;
@@ -189,18 +190,33 @@ input.name-input:focus {
 }
 
 #job-role {
-    font-size: 3rem;
+    font-size: 3vh;
 }
 
 #designation {
-    font-size: 1rem;
+    font-size: 1vh;
     float: right;
 }
 
 #description {
     text-align: justify; 
-    margin: 1vh 1vw 1vh 1vw; 
+    margin: 1vh 2vw 1vh 2vw;
+    padding-top: 20vh;
+    padding: auto;
     font-size: 2vh;
+    overflow-x: visible;
+    height: 50vh;
+}
+
+@media only screen and (max-width: 1500px) {
+    #description {
+        font-size: 1.5vh;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #description {
+        font-size: 1vh;
+    }
 }
 
 #description::first-letter{
@@ -229,7 +245,7 @@ input.name-input:focus {
 
 #skills {
     display: inline-flex; 
-    width: 60%;
+    max-width: 60%;
     left: 20%; 
     position: relative;
     padding-top: 6vh;

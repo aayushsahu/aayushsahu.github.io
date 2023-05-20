@@ -31,6 +31,9 @@ function checkFirstname(event) {
         introDiv.scrollIntoView();
         resetFirstname(firstnameInput);
         console.log("hello " + this.firstname);
+        
+        var fnameSpan = document.getElementById("fname");
+        fnameSpan.innerHTML = ' '+this.firstname;
     }
 }
 
