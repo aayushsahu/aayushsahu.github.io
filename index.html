@@ -2,18 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, mazimum-scale=1,
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,
             user-scalable=0">
         <link rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="resources/styles.css">
-        <script src="resources/functions.js"></script>
+        <!-- <script 
+            src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script> -->
+        <link rel="stylesheet" href="resources/styles-exp.css">
+        <script src="resources/functions-exp.js"></script>
+        <!-- <script src="resources/cube.js"></script> -->
         <title> Bootstrap demo</title>
     </head>
     <body>
@@ -24,47 +29,224 @@
                     onkeyup="checkFirstname(event)"/>
             </div>
 
-            <div id="details" class="banner-screen scroll-point svg-bg">
-                <div id="skills" class = "hello" onclick="addZoomOutCornerStyleAnimation()">Skills</div>
-                <div id="skill-glass" class="" style="visibility: hidden;">
-                </div>
-            </div>
-            
-            <div id="intro" class="banner-screen scroll-point svg-bg" >
+            <div id="intro" class="banner-screen scroll-point" >
                 <div id="image-drawer" class="images">
-                    <div id="card1" class="card1">
-                        <div class="circle position1" onclick="prev(event)"></div>
-                        <img src="./resources/2.jpg" class="glassmorphism"
-                            style="height:97%; width:100%; z-index:2; margin:auto;">
-                        <div class="circle position2" onclick="next()"></div>
+                    <div id="card1" class="card1 glassmorphism-shadowed">
+                        <img class="img" src="./resources/2.jpg" >
                     </div>
-                    <div id="card2" class="card2">
-                        <div style = "margin: 10vw 5vh">
+                    <div id="card2" class="card2 glassmorphism-shadowed">
+                        <!-- <div style = "margin: 5vh 5vw">
                             <span id="job-role" class ="gradient-text">Java Backend Developer</span>
                             <br>
-                            <span id="designation" class="gradient-text">(Senior Software Engineer)</span>
-                        </div>
+                            <span id="designation">(Senior Software Engineer)</span>
+                        </div> -->
                         
-                        <p style= "text-align: justify; margin: 1vh 1vw 1vh 1vw; font-size: 2vh;">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Beatae nobis facere dolores omnis veniam officiis placeat 
-                            architecto asperiores unde recusandae eaque maiores commodi 
-                            totam ullam necessitatibus voluptate aspernatur, mollitia quasi?
+                        <p id="description">
+                            Hello<span id="fname"></span>,
+                            <br><br>&nbsp;&nbsp;&nbsp;
+                            I am a 2019 Graduate in 
+                            <span class="gradient-text">
+                                B.Tech.(Hons.)
+                            </span> 
+                            in the field of 
+                            <span class="gradient-text">
+                                Computer Science with Specialization in Cloud Computing and Virtualization.
+                            </span>
+                            Professionally, I am working as full-time
+                            <span class="gradient-text"> 
+                                Software Engineer 
+                            </span>
+                            having 
+                            <span class="gradient-text">
+                                4+ years
+                            </span>
+                            of experience.
+                            
+                            I have proven experties in backend development using 
+                            <span class="gradient-text">
+                                Java(Spring Boot)
+                            </span> 
+                            and 
+                            <span class="gradient-text">
+                                Javascript(NodeJS & ExpressJS).
+                            </span>
+
+                            I am a passionate learner of frontend technologies like 
+                            <span class="gradient-text">HTML</span>, 
+                            <span class="gradient-text">CSS</span>, 
+                            <span class="gradient-text">ReactJS</span> 
+                            as well and working hard to gain proficiency. 
+                            
+                            I have experience with AWS cloud services as well including 
+                            <span class="gradient-text">Lambda Functions</span>, 
+                            <span class="gradient-text">EC2</span>, 
+                            <span class="gradient-text">Cognito</span>, 
+                            <span class="gradient-text">DynamoDB</span>, etc. 
+
+                            I am a keen learner and patient listener.
+                            <br><br><br><br><br>&nbsp;&nbsp;&nbsp;
+                            Please feel free to connect with me on social platforms for any <u>job opportunity</u>, 
+                            <u>freelance work</u> or <u>collaboration</u>.
                         </p>
                     </div>
                     
                 </div>
             </div>
-        
 
-        <footer class="banner-screen scroll-point" style="height: 100vh; padding-top: 85vh;">
-            <ul>
-                <li><a href="#banner">Banner</a></li>
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#footer">Footer</a></li>
-            </ul>
-        </footer>
-    </div>
+            <div id="details" class="banner-screen scroll-point">
+                <div id="competencies" class="gradient-text competencies">Competencies</div>
+                <div id="skills"> 
+                    <div id="java" class="skill-square">
+                        <div id="java-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR JAVA-->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-boot" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg"/>
+                            </div>
+                            <div id="spring-security" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS fFOR JAVA--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="js" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR NODE -->
+                        <div id="skills-js" style="margin-top: 0vh;">
+                            <div id="node-js" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
+                            </div>
+                            <div id="react-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="express-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"/>
+                            </div>
+                            <div id="nest-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS FOR NODE --> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="cloud" class="skill-square">
+                        <div id="cloud-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloud-icon.svg"/>
+                        </div>
+                        
+                        <!-- SMALL ICONS FOR AWS-->
+                        <div id="skills-cloud" style="margin-top: 0vh;">
+                            <div id="aws" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
+                            </div>
+                            <div id="terraform" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id="skills-cloud" style="margin-top: 0vh;">
+                            <div id="kubernetes" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg"/>
+                            </div>
+                            <div id="docker" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- END OF SMALL ICONS FOR AWS--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="html" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR HTML-->
+                        <div id="skills-html" style="margin-top: 0vh;">
+                            <div id="css" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"/>
+                            </div>
+                            <div id="bootstrap" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <!-- <div id="skills-html" style="margin-top: 0vh;">
+                            <div id="tailwind" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div> -->
+                        <!-- END OF SMALL ICONS HTML--> 
+                    </div>
+                    <div class="vl"></div>
+                    <div id="microservice" class="skill-square">
+                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                            <img class="skill-icons" src="https://www.erbrains.com/assets/azure/service-svg/blockchain.svg"/>
+                        </div>
+                        <!-- SMALL ICONS FOR CSS-->
+                        <div id="skills-microservice" style="margin-top: 0vh;">
+                            <div id="graphql" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"/>
+                            </div>
+                            <div id="grpc" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://cncf-branding.netlify.app/img/projects/grpc/horizontal/color/grpc-horizontal-color.svg"/>
+                            </div>
+                        </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <div id = "empty-block-element"> </div>
+                        <!-- EMPTY BLOCK ELEMENT -->
+                        <!-- <div id="skills-java" style="margin-top: 0vh;">
+                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            </div>
+                        </div> -->
+                        <!-- END OF SMALL ICONS FOR CSS--> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="banner-screen scroll-point svg-bg" > 
+                <footer>
+                    <ul>
+                        <li><a class="glassmorphism-shadowed" href="#banner">Banner</a></li>
+                        <li><a class="glassmorphism-shadowed" href="#intro">Intro</a></li>
+                        <li><a class="glassmorphism-shadowed" href="#details">Details</a></li>
+                        <li><a class="glassmorphism-shadowed" href="#footer">Footer</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+        <div >
+            <img class="img" src="./resources/top-arrow.png" style="position: fixed; bottom: 1vh; right: 1vw; width: 3vw;"/>
+        </div>
     </body>
 </html>
