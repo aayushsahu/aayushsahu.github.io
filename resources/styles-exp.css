@@ -184,7 +184,7 @@ input.name-input:focus {
 }
 
 .gradient-text:hover {
-    background: linear-gradient(to left,#a27dcf 0%, #993888 50% ,#5c045c 100%);
+    background: linear-gradient(to top,#f901aa 0%, #993888 50% ,#de0cde 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -283,6 +283,49 @@ input.name-input:focus {
     border-radius: 30px;
     padding: 1vh;
 }
+
+@media only screen and (max-width: 1200px) {
+
+    .vl {
+        height: unset;
+        max-height: 40rem;
+        min-height: 10rem;
+    }
+
+
+    #skills {
+        display: inline-flex; 
+        max-width: 60%;
+        padding-top: 6rem;
+        justify-content: center;
+    }
+    
+    #java > div {
+        display: block;
+        min-width: 2rem;
+        max-width: 4rem;
+    }
+    #js > div {
+        display: block;
+        min-width: 2rem;
+        max-width: 4rem;
+    }
+    #cloud > div {
+        display: block;
+        min-width: 2rem;
+        max-width: 4rem;
+    }
+    #html > div {
+        display: block;
+        min-width: 2rem;
+        max-width: 4rem;
+    }
+    #microservice > div {
+        display: block;
+        min-width: 2rem;
+        max-width: 4rem;
+    }
+}
 .rotateRight {
     -webkit-animation-name: rotateRight;
     animation: 1s ease-in-out forwards;
@@ -374,14 +417,30 @@ input.name-input:focus {
 /*--------------------------------------------------------*/
 
 .svg-bg {
-    background : linear-gradient(to top, #0C9 0%, #37B 40% ,#60F 100%);
+    background : linear-gradient(to top, rgb(120, 5, 178) 0%,#60F 100%);
 }
 
 footer {
     position: relative;
+    padding-top: 80vh;
     margin-top: 5vh;
     margin-bottom: 17vh;
     max-width: 100%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
 }
 
 ul{
@@ -407,6 +466,33 @@ li a:hover {
     color: var(--gray);
     text-decoration: none;
     animation: glow 2s infinite;
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        position: relative;
+        /* margin-top: 5vh; */
+        /* margin-bottom: 50vh; */
+        max-width: 100%;
+        padding-top: 72vh;
+    }
+    
+    ul {
+        display: inline;
+        max-width: 100%;
+    }
+
+    li, li a {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        height: 7vh;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        border-radius: 2vh;
+    }
+
 }
 /*--------------------------------------------------------*/
 /*_____________________Not In Use_________________________*/
