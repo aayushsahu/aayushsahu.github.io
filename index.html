@@ -2,47 +2,84 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,
-            user-scalable=0">
-        <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <!-- <script 
-            src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script> -->
-        <link rel="stylesheet" href="resources/styles-exp.css">
-        <script src="resources/functions-exp.js"></script>
-        <!-- <script src="resources/cube.js"></script> -->
-        <title>Aayush K. Sahu (Tech-Enabler)</title>
-        <link rel = "icon" 
-            href = "./resources/logo.svg" type = "image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Aayush K. Sahu - Software Engineer with 4+ years of experience in Java, Spring Boot, Node.js, and AWS Cloud Services. Specialized in backend development and cloud computing.">
+        <meta name="keywords" content="Software Engineer, Java Developer, Spring Boot, Node.js, AWS, Backend Developer, Cloud Computing">
+        <meta name="author" content="Aayush K. Sahu">
+        
+        <!-- Open Graph Tags -->
+        <meta property="og:title" content="Aayush K. Sahu - Software Engineer & Tech Enabler">
+        <meta property="og:description" content="Software Engineer with 4+ years of experience in backend development, cloud computing, and modern web technologies.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://aayushsahu.github.io">
+        
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Aayush K. Sahu - Software Engineer">
+        <meta name="twitter:description" content="Software Engineer with 4+ years of experience in backend development and cloud computing.">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        
+        <!-- External Resources -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+        <!-- Local Resources -->
+        <link rel="stylesheet" href="resources/styles.css">
+        <script src="resources/functions.js" defer></script>
+        
+        <title>Aayush K. Sahu - Software Engineer & Tech Enabler</title>
+        <link rel="icon" href="./resources/logo.svg" type="image/x-icon">
     </head>
     <body>
-        <div class ="banner-screen">
-            <div id="banner" class="banner-screen scroll-point" onclick="viewOrHideCursor()">
-                <h1 class="hello">Hello;</h1>
-                <input type="text" id="firstname" class="name-input" spellcheck="false" placeholder="firstname" 
-                    onkeyup="checkFirstname(event)"/>
+        <!-- Scroll Progress Indicator -->
+        <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+        
+        <div class="banner-screen">
+            <!-- Banner Section -->
+            <div id="banner" class="banner-screen scroll-point" role="banner">
+                <button class="banner-click-area" onclick="viewOrHideCursor()" aria-label="Click to enter your name">
+                    <h1 class="hello">
+                        <span class="hello-text">Hell</span>
+                        <span class="hello-photo-wrapper">
+                            <img src="./resources/2.jpg" alt="Aayush K. Sahu" class="hello-photo">
+                        </span>
+                        <span class="hello-text">;</span>
+                    </h1>
+                </button>
+                <a href="./resources/Aayush Kumar Sahu - Resume11:11.pdf" 
+                   download="Aayush_Kumar_Sahu_Resume.pdf"
+                   class="resume-download-btn glassmorphism-shadowed"
+                   aria-label="Download resume PDF">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <span>Download Resume</span>
+                </a>
+                <input type="text" 
+                       id="firstname" 
+                       class="name-input" 
+                       spellcheck="false" 
+                       placeholder="Enter your first name" 
+                       onkeyup="checkFirstname(event)"
+                       aria-label="Enter your first name"
+                       aria-describedby="name-input-hint"/>
+                <span id="name-input-hint" class="sr-only">Press Enter after typing your name to continue</span>
             </div>
 
-            <div id="intro" class="banner-screen scroll-point" >
+            <!-- Introduction Section -->
+            <section id="intro" class="banner-screen scroll-point" role="main" aria-labelledby="intro-heading">
                 <div id="image-drawer" class="images">
-                    <div id="card1" class="card1 glassmorphism-shadowed">
-                        <img class="img" src="./resources/2.jpg" >
+                    <div id="card1" class="card1 glassmorphism-shadowed" role="img" aria-label="Profile picture">
+                        <img class="img" src="./resources/2.jpg" alt="Aayush K. Sahu - Software Engineer">
                     </div>
                     <div id="card2" class="card2 glassmorphism-shadowed">
-                        <!-- <div style = "margin: 5vh 5vw">
-                            <span id="job-role" class ="gradient-text">Java Backend Developer</span>
-                            <br>
-                            <span id="designation">(Senior Software Engineer)</span>
-                        </div> -->
-                        
                         <p id="description">
                             Hello<span id="fname"></span>,
                             <br><br>&nbsp;&nbsp;&nbsp;
@@ -60,30 +97,9 @@
                             </span>
                             having 
                             <span class="gradient-text">
-                                4+ years
+                                6+ years
                             </span>
-                            of experience.
-                            
-                            I have proven experties in backend development using 
-                            <span class="gradient-text">
-                                Java(Spring Boot)
-                            </span> 
-                            and 
-                            <span class="gradient-text">
-                                Javascript(NodeJS & ExpressJS).
-                            </span>
-
-                            I am a passionate learner of frontend technologies like 
-                            <span class="gradient-text">HTML</span>, 
-                            <span class="gradient-text">CSS</span>, 
-                            <span class="gradient-text">ReactJS</span> 
-                            as well and working hard to gain proficiency. 
-                            
-                            I have experience with AWS cloud services as well including 
-                            <span class="gradient-text">Lambda Functions</span>, 
-                            <span class="gradient-text">EC2</span>, 
-                            <span class="gradient-text">Cognito</span>, 
-                            <span class="gradient-text">DynamoDB</span>, etc. 
+                            of experience in building scalable and efficient enterprise systems.
 
                             I am a keen learner and patient listener.
                             <br><br><br><br><br>&nbsp;&nbsp;&nbsp;
@@ -91,164 +107,351 @@
                             <u>freelance work</u> or <u>collaboration</u>.
                         </p>
                     </div>
-                    
                 </div>
-            </div>
+            </section>
 
-            <div id="details" class="banner-screen scroll-point">
-                <div id="competencies" class="gradient-text competencies">Competencies</div>
-                <div id="skills"> 
-                    <div id="java" class="skill-square">
-                        <div id="java-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"/>
+            <!-- Skills/Competencies Section -->
+            <section id="details" class="banner-screen scroll-point" role="region" aria-labelledby="competencies-heading">
+                <h2 id="competencies-heading" class="gradient-text competencies">Competencies</h2>
+                <div id="skills" role="list" aria-label="Technical skills"> 
+                    <!-- Java Skills -->
+                    <div id="java" class="skill-column" role="listitem">
+                        <div id="java-main" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Java">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java">
+                            <span class="skill-tooltip">Java</span>
                         </div>
-                        <!-- SMALL ICONS FOR JAVA-->
-                        <div id="skills-java" style="margin-top: 0vh;">
-                            <div id="spring-boot" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg"/>
+                        <div id="skills-java-row1" class="skills-row">
+                            <div id="spring-boot" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Spring Boot">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot">
+                                <span class="skill-tooltip">Spring Boot</span>
                             </div>
-                            <div id="spring-security" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java" style="margin-top: 0vh;">
-                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
-                            </div>
-                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            <div id="spring-security" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Spring Security">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-security.svg" alt="Spring Security">
+                                <span class="skill-tooltip">Spring Security</span>
                             </div>
                         </div>
-                        <!-- END OF SMALL ICONS fFOR JAVA--> 
+                        <div class="empty-block-element"></div>
+                        <div id="skills-java-row2" class="skills-row">
+                            <div id="spring-cloud" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Spring Cloud">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg" alt="Spring Cloud">
+                                <span class="skill-tooltip">Spring Cloud</span>
+                            </div>
+                            <div id="spring-data" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Spring Data">
+                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg" alt="Spring Data">
+                                <span class="skill-tooltip">Spring Data</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="vl"></div>
-                    <div id="js" class="skill-square">
-                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/>
+                    <div class="vl" aria-hidden="true"></div>
+                    
+                    <!-- JavaScript Skills -->
+                    <div id="js" class="skill-column" role="listitem">
+                        <div id="js-main" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="JavaScript">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript">
+                            <span class="skill-tooltip">JavaScript</span>
                         </div>
-                        <!-- SMALL ICONS FOR NODE -->
-                        <div id="skills-js" style="margin-top: 0vh;">
-                            <div id="node-js" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
+                        <div id="skills-js-row1" class="skills-row">
+                            <div id="node-js" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Node.js">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js">
+                                <span class="skill-tooltip">Node.js</span>
                             </div>
-                            <div id="react-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-java" style="margin-top: 0vh;">
-                            <div id="express-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"/>
-                            </div>
-                            <div id="nest-js" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg"/>
+                            <div id="react-js" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="React">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="React">
+                                <span class="skill-tooltip">React</span>
                             </div>
                         </div>
-                        <!-- END OF SMALL ICONS FOR NODE --> 
+                        <div class="empty-block-element"></div>
+                        <div id="skills-js-row2" class="skills-row">
+                            <div id="express-js" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Express.js">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" alt="Express.js">
+                                <span class="skill-tooltip">Express.js</span>
+                            </div>
+                            <div id="nest-js" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="NestJS">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg" alt="NestJS">
+                                <span class="skill-tooltip">NestJS</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="vl"></div>
-                    <div id="cloud" class="skill-square">
-                        <div id="cloud-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                            <img class="skill-icons" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloud-icon.svg"/>
+                    <div class="vl" aria-hidden="true"></div>
+                    
+                    <!-- Cloud Skills -->
+                    <div id="cloud" class="skill-column" role="listitem">
+                        <div id="cloud-main" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Cloud Computing">
+                            <img class="skill-icons" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloud-icon.svg" alt="Cloud Computing">
+                            <span class="skill-tooltip">Cloud Computing</span>
                         </div>
-                        
-                        <!-- SMALL ICONS FOR AWS-->
-                        <div id="skills-cloud" style="margin-top: 0vh;">
-                            <div id="aws" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
+                        <div id="skills-cloud-row1" class="skills-row">
+                            <div id="aws" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="AWS">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="Amazon Web Services">
+                                <span class="skill-tooltip">AWS</span>
                             </div>
-                            <div id="terraform" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg"/>
-                            </div>
-                        </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id="skills-cloud" style="margin-top: 0vh;">
-                            <div id="kubernetes" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg"/>
-                            </div>
-                            <div id="docker" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg"/>
+                            <div id="terraform" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Terraform">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt="Terraform">
+                                <span class="skill-tooltip">Terraform</span>
                             </div>
                         </div>
-                        <!-- END OF SMALL ICONS FOR AWS--> 
+                        <div class="empty-block-element"></div>
+                        <div id="skills-cloud-row2" class="skills-row">
+                            <div id="kubernetes" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Kubernetes">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg" alt="Kubernetes">
+                                <span class="skill-tooltip">Kubernetes</span>
+                            </div>
+                            <div id="docker" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Docker">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" alt="Docker">
+                                <span class="skill-tooltip">Docker</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="vl"></div>
-                    <div id="html" class="skill-square">
-                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"/>
+                    <div class="vl" aria-hidden="true"></div>
+                    
+                    <!-- Frontend Skills -->
+                    <div id="html" class="skill-column" role="listitem">
+                        <div id="html-main" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="HTML5">
+                            <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="HTML5">
+                            <span class="skill-tooltip">HTML5</span>
                         </div>
-                        <!-- SMALL ICONS FOR HTML-->
-                        <div id="skills-html" style="margin-top: 0vh;">
-                            <div id="css" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"/>
+                        <div id="skills-html-row1" class="skills-row">
+                            <div id="css" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="CSS3">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" alt="CSS3">
+                                <span class="skill-tooltip">CSS3</span>
                             </div>
-                            <div id="bootstrap" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"/>
+                            <div id="bootstrap" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Bootstrap">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap">
+                                <span class="skill-tooltip">Bootstrap</span>
                             </div>
                         </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <!-- <div id="skills-html" style="margin-top: 0vh;">
-                            <div id="tailwind" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+                        <div class="empty-block-element"></div>
+                        <div id="skills-html-row2" class="skills-row">
+                            <div id="tailwind" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Tailwind CSS">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS">
+                                <span class="skill-tooltip">Tailwind CSS</span>
                             </div>
-                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            <div id="sass" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="SASS">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS">
+                                <span class="skill-tooltip">SASS</span>
                             </div>
-                        </div> -->
-                        <!-- END OF SMALL ICONS HTML--> 
+                        </div>
                     </div>
-                    <div class="vl"></div>
-                    <div id="microservice" class="skill-square">
-                        <div id="js-1" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                            <img class="skill-icons" src="https://www.erbrains.com/assets/azure/service-svg/blockchain.svg"/>
+                    <div class="vl" aria-hidden="true"></div>
+                    
+                    <!-- Microservices Skills -->
+                    <div id="microservice" class="skill-column" role="listitem">
+                        <div id="microservice-main" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Microservices">
+                            <img class="skill-icons" src="https://www.erbrains.com/assets/azure/service-svg/blockchain.svg" alt="Microservices Architecture">
+                            <span class="skill-tooltip">Microservices</span>
                         </div>
-                        <!-- SMALL ICONS FOR CSS-->
-                        <div id="skills-microservice" style="margin-top: 0vh;">
-                            <div id="graphql" class="skill-square" onmouseenter = "setOldX(event)" onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"/>
+                        <div id="skills-microservice-row1" class="skills-row">
+                            <div id="graphql" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="GraphQL">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg" alt="GraphQL">
+                                <span class="skill-tooltip">GraphQL</span>
                             </div>
-                            <div id="grpc" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://cncf-branding.netlify.app/img/projects/grpc/horizontal/color/grpc-horizontal-color.svg"/>
+                            <div id="grpc" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="gRPC">
+                                <img class="skill-icons" src="https://cncf-branding.netlify.app/img/projects/grpc/horizontal/color/grpc-horizontal-color.svg" alt="gRPC">
+                                <span class="skill-tooltip">gRPC</span>
                             </div>
                         </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <div id = "empty-block-element"> </div>
-                        <!-- EMPTY BLOCK ELEMENT -->
-                        <!-- <div id="skills-java" style="margin-top: 0vh;">
-                            <div id="spring-cloud" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-cloud.svg"/>
+                        <div class="empty-block-element"></div>
+                        <div id="skills-microservice-row2" class="skills-row">
+                            <div id="rabbitmq" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="RabbitMQ">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original-wordmark.svg" alt="RabbitMQ">
+                                <span class="skill-tooltip">RabbitMQ</span>
                             </div>
-                            <div id="spring-data" class="skill-square" onmouseenter = "setOldX(event)"  onmousemove="addRotate(event)">
-                                <img class="skill-icons" src="https://spring.io/img/projects/spring-data.svg"/>
+                            <div id="redis" class="skill-square" onmouseenter="setOldX(event)" onmousemove="addRotate(event)" aria-label="Redis">
+                                <img class="skill-icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" alt="Redis">
+                                <span class="skill-tooltip">Redis</span>
                             </div>
-                        </div> -->
-                        <!-- END OF SMALL ICONS FOR CSS--> 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="banner-screen scroll-point" role="region" aria-labelledby="projects-heading">
+                <h2 id="projects-heading" class="gradient-text competencies">Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card glassmorphism-shadowed">
+                        <h3 class="project-title">Backstage Developer Portal</h3>
+                        <p class="project-description">Enhanced developer experience at EY by building a comprehensive Developer Experience Portal using Spotify's Backstage. Implemented tech-radar for evaluating and standardizing tech stacks, created Tech Insights plugin with rule engine for tracking repo health and engineering productivity metrics, and integrated ChatGPT APIs securely for AI-assisted development under strict data confidentiality.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Backstage</span>
+                            <span class="tech-tag">Typescript</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">ChatGPT API</span>
+                        </div>
+                    </div>
+                    <div class="project-card glassmorphism-shadowed">
+                        <h3 class="project-title">Pine App</h3>
+                        <p class="project-description">Engineered a scalable healthcare platform using Spring WebFlux-based microservices architecture deployed on AWS. Implemented CQRS pattern for optimal performance and owned multiple core services including IAM, Patient, and Registration services. Ensured HIPAA compliance with complete CI/CD pipeline and production monitoring. Integrated with Cerner-Soarian and MIRTH for HL7-compliant healthcare data exchange.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Spring WebFlux</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">CQRS</span>
+                            <span class="tech-tag">HIPAA</span>
+                            <span class="tech-tag">HL7</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="banner-screen scroll-point" role="region" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" class="gradient-text competencies">Experience</h2>
+                <div class="experience-timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-markers">
+                        <div class="timeline-marker active-marker" data-index="0" onmouseenter="showExperience(0)" onmouseleave="hideExperience(0)">
+                            <div class="marker-date-left">02/2025 – Present</div>
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-marker" data-index="1" onmouseenter="showExperience(1)" onmouseleave="hideExperience(1)">
+                            <div class="marker-date-left">08/2023 – 01/2025</div>
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-marker" data-index="2" onmouseenter="showExperience(2)" onmouseleave="hideExperience(2)">
+                            <div class="marker-date-left">12/2021 – 08/2023</div>
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-marker" data-index="3" onmouseenter="showExperience(3)" onmouseleave="hideExperience(3)">
+                            <div class="marker-date-left">06/2019 – 12/2021</div>
+                            <div class="marker-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-content-area" onmouseenter="keepExperienceVisible()" onmouseleave="allowExperienceHide()">
+                        <div class="timeline-item glassmorphism-shadowed active" data-timeline-index="0">
+                            <!-- <div class="timeline-year">02/2025 – Present</div> -->
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Senior Software Engineer – Canterr Inc.</h3>
+                                <p class="timeline-company">Bengaluru, IN</p>
+                                <ul class="timeline-skills">
+                                    <li>Migrated 100% of Elasticsearch data to a Backstage-managed cluster with zero downtime and full data consistency, improving automation and reliability</li>
+                                    <li>Built an admin portal for Cold/Warm Transfer requests, integrating seller approval workflows and cutting enrolment time by ~93% (30 → 2 days)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item glassmorphism-shadowed" data-timeline-index="1">
+                            <!-- <div class="timeline-year">08/2023 – 01/2025</div> -->
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Sr. Consultant - Technology (BFS) – Ernst & Young (EY)</h3>
+                                <p class="timeline-company">Gurugram, IN</p>
+                                <ul class="timeline-skills">
+                                    <li>Developed a Developer Experience Portal using Spotify's Backstage with TS, AWS, Terraform, and Jenkins to enhance engineering efficiency</li>
+                                    <li>Designed and implemented a Tech Radar to evaluate and standardize tech stacks across multiple teams</li>
+                                    <li>Integrated ChatGPT APIs securely for monitored AI-assisted development under strict data confidentiality</li>
+                                    <li>Built 'Tech Insights' plugin using rule engine to track repo health and engineering productivity metrics</li>
+                                    <li>Created E2E test framework using Playwright ensuring portal reliability and regression coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item glassmorphism-shadowed" data-timeline-index="2">
+                            <!-- <div class="timeline-year">12/2021 – 08/2023</div> -->
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Senior Software Engineer – LTIMindtree Ltd.</h3>
+                                <p class="timeline-company">Noida, IN</p>
+                                <ul class="timeline-skills">
+                                    <li>Engineered Pine App, a Spring WebFlux-based healthcare platform deployed on AWS microservices architecture with CQRS pattern</li>
+                                    <li>Owned multiple core services (IAM, Patient, Registration, etc.) including CI/CD and production monitoring under HIPAA compliance</li>
+                                    <li>Integrated services with Cerner-Soarian and MIRTH for HL7-compliant healthcare data exchange</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item glassmorphism-shadowed" data-timeline-index="3">
+                            <!-- <div class="timeline-year">06/2019 – 12/2021</div> -->
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">System Engineer (BFS) – Tata Consultancy Services</h3>
+                                <p class="timeline-company">Pune, IN</p>
+                                <ul class="timeline-skills">
+                                    <li>Implemented feature enhancements for Qatar International Payments (QIP) and Internet Banking systems for MENA-based clients</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-            <div class="banner-screen scroll-point svg-bg" > 
-                <footer>
-                    <ul>
-                        <li><a class="glassmorphism-shadowed" href="#banner">Banner</a></li>
-                        <li><a class="glassmorphism-shadowed" href="#intro">Intro</a></li>
-                        <li><a class="glassmorphism-shadowed" href="#details">Details</a></li>
-                        <li><a class="glassmorphism-shadowed" href="#footer">Footer</a></li>
-                    </ul>
-                </footer>
-            </div>
+            <!-- Footer Section -->
+            <footer id="footer" class="banner-screen scroll-point svg-bg" role="contentinfo">
+                <div class="footer-content">
+                    <div class="footer-navigation">
+                        <h3 class="footer-heading">Navigation</h3>
+                        <ul role="list">
+                            <li><a class="glassmorphism-shadowed" href="#banner" aria-label="Go to banner section">Banner</a></li>
+                            <li><a class="glassmorphism-shadowed" href="#intro" aria-label="Go to introduction section">Intro</a></li>
+                            <li><a class="glassmorphism-shadowed" href="#details" aria-label="Go to skills section">Skills</a></li>
+                            <li><a class="glassmorphism-shadowed" href="#projects" aria-label="Go to projects section">Projects</a></li>
+                            <li><a class="glassmorphism-shadowed" href="#experience" aria-label="Go to experience section">Experience</a></li>
+                            <li><a class="glassmorphism-shadowed resume-download-link" 
+                                   href="./resources/Aayush Kumar Sahu - Resume11:11.pdf" 
+                                   download="Aayush_Kumar_Sahu_Resume.pdf"
+                                   aria-label="Download resume PDF">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <h3 class="footer-heading">Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/aayushsahu" 
+                               class="social-link glassmorphism-shadowed" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="LinkedIn profile">
+                                <i class="fa fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/aayushsahu" 
+                               class="social-link glassmorphism-shadowed" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="GitHub profile">
+                                <i class="fa fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:your.email@example.com" 
+                               class="social-link glassmorphism-shadowed" 
+                               aria-label="Send email">
+                                <i class="fa fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://twitter.com/aayushsahu" 
+                               class="social-link glassmorphism-shadowed" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="Twitter profile">
+                                <i class="fa fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3 class="footer-heading">Contact</h3>
+                        <p class="contact-info">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:aayush.sahu.dev@gmail.com" aria-label="Email address">aayush.sahu.dev@gmail.com</a>
+                        </p>
+                        <p class="contact-info">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+919555399742" aria-label="Phone number">+91-9555-399-742</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Aayush K. Sahu. All rights reserved.</p>
+                </div>
+            </footer>
         </div>
-        <div >
-            <img class="img" src="./resources/top-arrow.png" style="position: fixed; bottom: 1vh; right: 1vw; width: 3vw;"/>
-        </div>
+        
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" 
+                class="scroll-to-top active-marker marker-dot" 
+                onclick="scrollToTop()" 
+                aria-label="Scroll to top"
+                title="Scroll to top">
+            <img src="./resources/top-arrow.png" alt="Scroll to top">
+        </button>
     </body>
 </html>
