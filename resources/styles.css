@@ -1176,15 +1176,6 @@ input.name-input:focus-visible {
     max-height: 600px;
 }
 
-/* First timeline item visible by default */
-.timeline-item[data-timeline-index="0"] {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    pointer-events: all;
-    position: absolute;
-    visibility: visible;
-}
-
 .timeline-item.active {
     opacity: 1;
     transform: translateX(0) scale(1);
@@ -1250,29 +1241,43 @@ input.name-input:focus-visible {
     text-align: justify;
 }
 
-.timeline-skills {
+.timeline-description {
+    font-size: 1.6vh;
+    line-height: 1.8;
+    margin: 1.5vh 0;
+    text-align: left;
+}
+
+.timeline-contributions {
+    margin-top: 2vh;
+}
+
+.contributions-heading {
+    font-size: 1.8vh;
+    font-weight: 600;
+    margin-bottom: 1vh;
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px rgba(79, 172, 254, 0.6);
+}
+
+.timeline-list {
     list-style: none;
     padding-left: 0;
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh 2vw;
 }
 
-.timeline-skills li {
-    font-size: 1.6vh;
-    line-height: 2;
-    padding: 0.5vh 0;
-    padding-left: 2.5vw;
-    position: relative;
+.timeline-list li {
+    font-size: 1.5vh;
+    line-height: 1.6;
+    padding: 0.5vh 1vw;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: left;
-}
-
-.timeline-skills li::before {
-    content: '▸';
-    position: absolute;
-    left: 0.5vw;
-    color: var(--accent-primary);
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(79, 172, 254, 0.6);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1383,9 +1388,17 @@ input.name-input:focus-visible {
         font-size: 1.6vh;
     }
     
-    .timeline-skills li {
+    .timeline-list li {
+        font-size: 1.3vh;
+        padding: 0.4vh 0.8vw;
+    }
+    
+    .contributions-heading {
+        font-size: 1.6vh;
+    }
+    
+    .timeline-description {
         font-size: 1.4vh;
-        padding-left: 4vw;
     }
     
     .marker-date {
@@ -1500,7 +1513,7 @@ input.name-input:focus-visible {
 
 .social-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5vh;
 }
 

@@ -1,74 +1,4 @@
 //----------------------------------------------------------------------
-// Name Input Functionality
-//----------------------------------------------------------------------
-let firstname = "";
-
-function viewOrHideCursor() {
-    try {
-        const firstnameInput = document.getElementById("firstname");
-        if (!firstnameInput) {
-            console.error("Firstname input element not found");
-            return;
-        }
-        
-        const visibility = window.getComputedStyle(firstnameInput).getPropertyValue("visibility");
-        if (visibility === "hidden") {
-            firstnameInput.style.visibility = "visible";
-            firstnameInput.focus();
-        } else if (visibility === "visible" && firstnameInput.value.trim().length === 0) {
-            firstnameInput.style.opacity = "0.4";
-            firstnameInput.style.visibility = "hidden";
-        }
-    } catch (error) {
-        console.error("Error in viewOrHideCursor:", error);
-    }
-}
-
-function checkFirstname(event) {
-    try {
-        const firstnameInput = document.getElementById("firstname");
-        if (!firstnameInput) {
-            console.error("Firstname input element not found");
-            return;
-        }
-        
-        const opacity = window.getComputedStyle(firstnameInput).getPropertyValue("opacity");
-        
-        if (opacity === "0.4" && firstnameInput.value.length > 0) {
-            firstnameInput.style.opacity = "1";
-        } else if (firstnameInput.value.length === 0) {
-            firstnameInput.style.opacity = "0.4";
-        }
-
-        if (event.key === "Enter" && firstnameInput.value.trim().length > 0) {
-            const introDiv = document.getElementById("intro");
-            if (introDiv) {
-                introDiv.scrollIntoView({ behavior: "smooth" });
-                resetFirstname(firstnameInput);
-                
-                const fnameSpan = document.getElementById("fname");
-                if (fnameSpan) {
-                    fnameSpan.innerHTML = ' ' + firstname;
-                }
-            }
-        }
-    } catch (error) {
-        console.error("Error in checkFirstname:", error);
-    }
-}
-
-function resetFirstname(firstnameInput) {
-    try {
-        firstname = firstnameInput.value.trim();
-        firstnameInput.value = "";
-        firstnameInput.style.opacity = "0";
-        firstnameInput.style.visibility = "hidden";
-    } catch (error) {
-        console.error("Error in resetFirstname:", error);
-    }
-}
-
-//----------------------------------------------------------------------
 // Scroll Progress Indicator
 //----------------------------------------------------------------------
 function updateScrollProgress() {
@@ -205,18 +135,6 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(handleExternalResourceError, 1000);
         });
         
-        // Add keyboard navigation support
-        document.addEventListener("keydown", function(event) {
-            // Escape key to close/hide input
-            if (event.key === "Escape") {
-                const firstnameInput = document.getElementById("firstname");
-                if (firstnameInput && firstnameInput.style.visibility === "visible") {
-                    firstnameInput.style.opacity = "0.4";
-                    firstnameInput.style.visibility = "hidden";
-                    firstnameInput.blur();
-                }
-            }
-        });
         
     } catch (error) {
         console.error("Error initializing page:", error);
@@ -267,8 +185,9 @@ function showExperience(index) {
         
         // Hide all timeline items with smooth transition
         const allItems = document.querySelectorAll('.timeline-item');
-        allItems.forEach((item, i) => {
-            if (i !== index) {
+        allItems.forEach((item) => {
+            const itemIndex = parseInt(item.getAttribute('data-timeline-index'));
+            if (itemIndex !== index) {
                 item.classList.remove('active');
             }
         });

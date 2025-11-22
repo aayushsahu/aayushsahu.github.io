@@ -62,15 +62,6 @@
                     <i class="fa fa-download" aria-hidden="true"></i>
                     <span>Download Resume</span>
                 </a>
-                <input type="text" 
-                       id="firstname" 
-                       class="name-input" 
-                       spellcheck="false" 
-                       placeholder="Enter your first name" 
-                       onkeyup="checkFirstname(event)"
-                       aria-label="Enter your first name"
-                       aria-describedby="name-input-hint"/>
-                <span id="name-input-hint" class="sr-only">Press Enter after typing your name to continue</span>
             </div>
 
             <!-- Introduction Section -->
@@ -81,7 +72,7 @@
                     </div>
                     <div id="card2" class="card2 glassmorphism-shadowed">
                         <p id="description">
-                            Hello<span id="fname"></span>,
+                            Hello,
                             <br><br>&nbsp;&nbsp;&nbsp;
                             I am a 2019 Graduate in 
                             <span class="gradient-text">
@@ -303,68 +294,98 @@
                     <div class="timeline-line"></div>
                     <div class="timeline-markers">
                         <div class="timeline-marker active-marker" data-index="0" onmouseenter="showExperience(0)" onmouseleave="hideExperience(0)">
-                            <div class="marker-date-left">02/2025 – Present</div>
+                            <div class="marker-date-left">Present</div>
                             <div class="marker-dot"></div>
                         </div>
                         <div class="timeline-marker" data-index="1" onmouseenter="showExperience(1)" onmouseleave="hideExperience(1)">
-                            <div class="marker-date-left">08/2023 – 01/2025</div>
+                            <div class="marker-date-left">2023</div>
                             <div class="marker-dot"></div>
                         </div>
                         <div class="timeline-marker" data-index="2" onmouseenter="showExperience(2)" onmouseleave="hideExperience(2)">
-                            <div class="marker-date-left">12/2021 – 08/2023</div>
+                            <div class="marker-date-left">2021</div>
                             <div class="marker-dot"></div>
                         </div>
                         <div class="timeline-marker" data-index="3" onmouseenter="showExperience(3)" onmouseleave="hideExperience(3)">
-                            <div class="marker-date-left">06/2019 – 12/2021</div>
+                            <div class="marker-date-left">2019</div>
                             <div class="marker-dot"></div>
                         </div>
                     </div>
                     <div class="timeline-content-area" onmouseenter="keepExperienceVisible()" onmouseleave="allowExperienceHide()">
                         <div class="timeline-item glassmorphism-shadowed active" data-timeline-index="0">
-                            <!-- <div class="timeline-year">02/2025 – Present</div> -->
                             <div class="timeline-content">
-                                <h3 class="timeline-title">Senior Software Engineer – Canterr Inc.</h3>
-                                <p class="timeline-company">Bengaluru, IN</p>
-                                <ul class="timeline-skills">
-                                    <li>Migrated 100% of Elasticsearch data to a Backstage-managed cluster with zero downtime and full data consistency, improving automation and reliability</li>
-                                    <li>Built an admin portal for Cold/Warm Transfer requests, integrating seller approval workflows and cutting enrolment time by ~93% (30 → 2 days)</li>
-                                </ul>
+                                <h3 class="timeline-title">Backend Engineer – Wayfair</h3>
+                                <p class="timeline-company">B2B2C e-commerce platform</p>
+                                <p class="timeline-description">Backend development, testing, and deployment of microservices for Order Management and Post-Delivery Services.</p>
+                                <div class="timeline-contributions">
+                                    <h4 class="contributions-heading">Key Contributions & Tech Stack</h4>
+                                    <ul class="timeline-list">
+                                        <li>Java (Spring Boot)</li>
+                                        <li>Node.js</li>
+                                        <li>ReactJS</li>
+                                        <li>Kafka</li>
+                                        <li>Avro schemas</li>
+                                        <li>GraphQL</li>
+                                        <li>Buildkite CI/CD</li>
+                                        <li>AWS EKS</li>
+                                        <li>Datadog</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-item glassmorphism-shadowed" data-timeline-index="1">
-                            <!-- <div class="timeline-year">08/2023 – 01/2025</div> -->
                             <div class="timeline-content">
-                                <h3 class="timeline-title">Sr. Consultant - Technology (BFS) – Ernst & Young (EY)</h3>
-                                <p class="timeline-company">Gurugram, IN</p>
-                                <ul class="timeline-skills">
-                                    <li>Developed a Developer Experience Portal using Spotify's Backstage with TS, AWS, Terraform, and Jenkins to enhance engineering efficiency</li>
-                                    <li>Designed and implemented a Tech Radar to evaluate and standardize tech stacks across multiple teams</li>
-                                    <li>Integrated ChatGPT APIs securely for monitored AI-assisted development under strict data confidentiality</li>
-                                    <li>Built 'Tech Insights' plugin using rule engine to track repo health and engineering productivity metrics</li>
-                                    <li>Created E2E test framework using Playwright ensuring portal reliability and regression coverage</li>
-                                </ul>
+                                <h3 class="timeline-title">Platform Engineer – Fidelity Investments</h3>
+                                <p class="timeline-company">Platform Engineering team</p>
+                                <p class="timeline-description">Building a Developer Experience (DevEx) platform using Backstage.</p>
+                                <div class="timeline-contributions">
+                                    <h4 class="contributions-heading">Key Contributions & Tech Stack</h4>
+                                    <ul class="timeline-list">
+                                        <li>Backstage plugins</li>
+                                        <li>Monorepo architecture (Lerna)</li>
+                                        <li>TypeScript</li>
+                                        <li>Node.js (Express.js)</li>
+                                        <li>React.js</li>
+                                        <li>Spotify's Backstage framework</li>
+                                        <li>Jenkins CI/CD</li>
+                                        <li>AWS ECS</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-item glassmorphism-shadowed" data-timeline-index="2">
-                            <!-- <div class="timeline-year">12/2021 – 08/2023</div> -->
                             <div class="timeline-content">
-                                <h3 class="timeline-title">Senior Software Engineer – LTIMindtree Ltd.</h3>
-                                <p class="timeline-company">Noida, IN</p>
-                                <ul class="timeline-skills">
-                                    <li>Engineered Pine App, a Spring WebFlux-based healthcare platform deployed on AWS microservices architecture with CQRS pattern</li>
-                                    <li>Owned multiple core services (IAM, Patient, Registration, etc.) including CI/CD and production monitoring under HIPAA compliance</li>
-                                    <li>Integrated services with Cerner-Soarian and MIRTH for HL7-compliant healthcare data exchange</li>
-                                </ul>
+                                <h3 class="timeline-title">Backend Engineer – Baptist Health</h3>
+                                <p class="timeline-company">Pine App (healthcare-focused application)</p>
+                                <p class="timeline-description">Development of backend services for the Pine App. The project followed a CQRS-based design pattern.</p>
+                                <div class="timeline-contributions">
+                                    <h4 class="contributions-heading">Key Contributions & Tech Stack</h4>
+                                    <ul class="timeline-list">
+                                        <li>Spring WebFlux</li>
+                                        <li>IAM, Profile, Patient, Registration modules</li>
+                                        <li>Integration with Cerner Soarian Financial</li>
+                                        <li>Cerner Millennium</li>
+                                        <li>MIRTH</li>
+                                        <li>GitLab CI</li>
+                                        <li>AWS EKS</li>
+                                        <li>Splunk</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-item glassmorphism-shadowed" data-timeline-index="3">
-                            <!-- <div class="timeline-year">06/2019 – 12/2021</div> -->
                             <div class="timeline-content">
-                                <h3 class="timeline-title">System Engineer (BFS) – Tata Consultancy Services</h3>
-                                <p class="timeline-company">Pune, IN</p>
-                                <ul class="timeline-skills">
-                                    <li>Implemented feature enhancements for Qatar International Payments (QIP) and Internet Banking systems for MENA-based clients</li>
-                                </ul>
+                                <h3 class="timeline-title">Backend Engineer – HSBC</h3>
+                                <p class="timeline-company">QR-based payment application</p>
+                                <p class="timeline-description">Building a QR-based payment application integrated into the Qatar HSBC mobile banking app.</p>
+                                <div class="timeline-contributions">
+                                    <h4 class="contributions-heading">Key Contributions & Tech Stack</h4>
+                                    <ul class="timeline-list">
+                                        <li>AS400 (IBM Mainframe) systems</li>
+                                        <li>Spring Boot integration layer</li>
+                                        <li>Jenkins CI/CD</li>
+                                        <li>Deployment on IWS servers</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -400,7 +421,6 @@
                                rel="noopener noreferrer"
                                aria-label="LinkedIn profile">
                                 <i class="fa fa-linkedin"></i>
-                                <span>LinkedIn</span>
                             </a>
                             <a href="https://github.com/aayushsahu" 
                                class="social-link glassmorphism-shadowed" 
@@ -408,13 +428,11 @@
                                rel="noopener noreferrer"
                                aria-label="GitHub profile">
                                 <i class="fa fa-github"></i>
-                                <span>GitHub</span>
                             </a>
                             <a href="mailto:aayush.sahu.dev@gmail.com" 
                                class="social-link glassmorphism-shadowed" 
                                aria-label="Send email">
                                 <i class="fa fa-envelope"></i>
-                                <span>Email</span>
                             </a>
                             <!-- <a href="https://twitter.com/aayushsahu" 
                                class="social-link glassmorphism-shadowed" 
